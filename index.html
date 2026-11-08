@@ -8,7 +8,6 @@
   <meta name="description" content="Security Analyst and Pentester specializing in offensive operations, VAPT, and secure infrastructure." />
   <meta name="theme-color" content="#0b0f14" />
 
-
   <meta property="og:title" content="Khen Belleza — Security Analyst & Pentester" />
   <meta property="og:description" content="Offensive security, VAPT, and secure infrastructure." />
   <meta property="og:type" content="website" />
@@ -16,11 +15,9 @@
 
   <link rel="icon" href="img/favicon.ico" />
 
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
-
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -53,26 +50,21 @@
   </script>
 
   <style>
-
     .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
     .reveal.in { opacity: 1; transform: translateY(0); }
-
 
     .filter-btn.active {
       background: linear-gradient(135deg, #22d3ee, #a78bfa);
       color: #0b0f14;
     }
 
-
     .project.hidden { display: none; }
-
 
     a:focus-visible, button:focus-visible {
       outline: 2px solid #22d3ee;
       outline-offset: 2px;
       border-radius: 6px;
     }
-
 
     .hero-grid {
       background-image:
@@ -81,6 +73,12 @@
         linear-gradient(to right, rgba(255,255,255,.04) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(255,255,255,.04) 1px, transparent 1px);
       background-size: auto, auto, 44px 44px, 44px 44px;
+    }
+
+    @media (min-width: 1024px) {
+      #cert-grid > :last-child:nth-child(3n + 2) {
+        grid-column: 2 / span 1;
+      }
     }
   </style>
 </head>
@@ -117,7 +115,7 @@
     </nav>
   </header>
 
-
+  <!-- ===== HERO ===== -->
   <section id="home" class="hero-grid">
     <div class="max-w-6xl mx-auto px-5 py-24 md:py-32">
       <p class="font-mono text-sm text-accent mb-4">$ whoami</p>
@@ -135,13 +133,9 @@
         <a href="#projects" class="inline-flex items-center gap-2 rounded-lg bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-semibold px-5 py-3 hover:opacity-90 transition">
           View Projects
         </a>
-        <a href="img/khen-belleza-cv.pdf" class="inline-flex items-center gap-2 rounded-lg border border-slate-300 dark:border-white/20 font-semibold px-5 py-3 hover:border-accent hover:text-accent transition" download>
-          Download CV
-        </a>
       </div>
     </div>
   </section>
-
 
   <section id="about" class="max-w-6xl mx-auto px-5 py-20 reveal">
     <h2 class="text-2xl md:text-3xl font-bold mb-6">Summary</h2>
@@ -150,11 +144,9 @@
     </p>
   </section>
 
-
   <section id="skills" class="max-w-6xl mx-auto px-5 py-20 reveal">
     <h2 class="text-2xl md:text-3xl font-bold mb-8">Skills</h2>
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-      <!-- Repeat this block for each skill -->
       <div class="rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 px-4 py-4 hover:border-accent transition">
         <p class="font-medium text-sm">Network Penetration Tester</p>
       </div>
@@ -194,7 +186,6 @@
     </div>
   </section>
 
-
   <section id="education" class="max-w-6xl mx-auto px-5 py-20 reveal">
     <h2 class="text-2xl md:text-3xl font-bold mb-8">Education</h2>
     <div class="grid md:grid-cols-2 gap-5">
@@ -210,7 +201,6 @@
       </div>
     </div>
   </section>
-
 
   <section id="experience" class="max-w-6xl mx-auto px-5 py-20 reveal">
     <h2 class="text-2xl md:text-3xl font-bold mb-8">Experience</h2>
@@ -242,7 +232,6 @@
     </ol>
   </section>
 
-
   <section id="projects" class="max-w-6xl mx-auto px-5 py-20 reveal">
     <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
       <h2 class="text-2xl md:text-3xl font-bold">Projects</h2>
@@ -256,7 +245,6 @@
     </div>
 
     <div id="project-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-      <!-- PROJECT CARD TEMPLATE -->
       <article class="project" data-cat="pentest">
         <button class="group block w-full text-left rounded-xl overflow-hidden border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 hover:border-accent transition"
                 data-img="img/poc1.jpg" data-title="Portable Pentesting Tools" data-desc="Raspberry Pi 5-based portable pentest kit.">
@@ -427,73 +415,109 @@
     </div>
   </section>
 
-
   <section id="certs" class="max-w-6xl mx-auto px-5 py-20 reveal">
     <h2 class="text-2xl md:text-3xl font-bold mb-8">Certifications</h2>
-    <div class="grid sm:grid-cols-2 gap-5">
+    <div id="cert-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- 1 -->
+
+      <a href="https://certs.zeropointsecurity.co.uk/5495429a-db04-4169-b805-45a2bd05436c#acc.IF2cSd1j" target="_blank" rel="noopener"
+         class="group rounded-xl overflow-hidden border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 hover:border-accent transition">
+        <div class="aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-black/30">
+          <img src="img/crto.png" alt="Zero-Point Security CRTO badge" loading="lazy"
+               class="w-full h-full object-contain p-3 group-hover:scale-105 transition duration-500" />
+        </div>
+        <div class="p-4 border-t border-slate-200 dark:border-white/10">
+          <h3 class="font-semibold">Zero-Point Security — CRTO</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Certified Red Team Operator</p>
+        </div>
+      </a>
+
       <a href="https://certified.tcm-sec.com/93aa1f14-37b7-42d9-a6c3-f66d7ec74869#acc.fNrBd17H" target="_blank" rel="noopener"
          class="group rounded-xl overflow-hidden border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 hover:border-accent transition">
-        <img src="img/pwpp-1.png" alt="TCM Security PWPP certificate" loading="lazy" class="w-full aspect-[16/10] object-cover" />
-        <div class="p-4"><h3 class="font-semibold">TCM Security — PWPP</h3></div>
+        <div class="aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-black/30">
+          <img src="img/pwpp-1.png" alt="TCM Security PWPP certificate" loading="lazy"
+               class="w-full h-full object-contain p-3 group-hover:scale-105 transition duration-500" />
+        </div>
+        <div class="p-4 border-t border-slate-200 dark:border-white/10">
+          <h3 class="font-semibold">TCM Security — PWPP</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Practical Web Penetration Tester</p>
+        </div>
       </a>
+
+      <!-- 2 -->
       <a href="https://certified.tcm-sec.com/b72a89a0-4a94-47f6-90f2-a1950908a06f#acc.gjH462xB" target="_blank" rel="noopener"
          class="group rounded-xl overflow-hidden border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 hover:border-accent transition">
-        <img src="img/pnpt-1.png" alt="TCM Security PNPT certificate" loading="lazy" class="w-full aspect-[16/10] object-cover" />
-        <div class="p-4"><h3 class="font-semibold">TCM Security — PNPT</h3></div>
+        <div class="aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-black/30">
+          <img src="img/pnpt-1.png" alt="TCM Security PNPT certificate" loading="lazy"
+               class="w-full h-full object-contain p-3 group-hover:scale-105 transition duration-500" />
+        </div>
+        <div class="p-4 border-t border-slate-200 dark:border-white/10">
+          <h3 class="font-semibold">TCM Security — PNPT</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Practical Network Penetration Tester</p>
+        </div>
       </a>
+
+
+      <a href="https://candidate.speedexam.net/certificate.aspx?SSTATE=am4131EniU8ntjp4bO5mXaORKgAmKib7MV58iKQS5VRrUFcvp8AKo5ZUJmOYr9ZwOwFJq7s3Z54Az67Yhwz8iM9O83QcAthahHvokH7G//s%3D" target="_blank" rel="noopener"
+         class="group rounded-xl overflow-hidden border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 hover:border-accent transition">
+        <div class="aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-black/30">
+          <img src="img/crto.png" alt="Zero-Point Security CRTO badge" loading="lazy"
+               class="w-full h-full object-contain p-3 group-hover:scale-105 transition duration-500" />
+        </div>
+        <div class="p-4 border-t border-slate-200 dark:border-white/10">
+          <h3 class="font-semibold">The SecOps Group - CNPEN</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Certified Network Penetration Tester</p>
+        </div>
+      </a>
+
+      <!-- 3 -->
       <a href="https://www.credly.com/badges/75faf1e5-be31-4dbc-9a0e-237cfdf3d580" target="_blank" rel="noopener"
          class="group rounded-xl overflow-hidden border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 hover:border-accent transition">
-        <img src="img/splus.png" alt="CompTIA Security+ badge" loading="lazy" class="w-full aspect-[16/10] object-cover" />
-        <div class="p-4"><h3 class="font-semibold">CompTIA Security+</h3></div>
+        <div class="aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-black/30">
+          <img src="img/splus.png" alt="CompTIA Security+ badge" loading="lazy"
+               class="w-full h-full object-contain p-3 group-hover:scale-105 transition duration-500" />
+        </div>
+        <div class="p-4 border-t border-slate-200 dark:border-white/10">
+          <h3 class="font-semibold">CompTIA Security+</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Core cybersecurity certification</p>
+        </div>
       </a>
+
       <a href="https://www.credly.com/badges/bc3ad3c8-92b2-4a4d-aafc-4e5543aeeda0" target="_blank" rel="noopener"
          class="group rounded-xl overflow-hidden border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 hover:border-accent transition">
-        <img src="img/aplus.png" alt="CompTIA A+ badge" loading="lazy" class="w-full aspect-[16/10] object-cover" />
-        <div class="p-4"><h3 class="font-semibold">CompTIA A+</h3></div>
+        <div class="aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-black/30">
+          <img src="img/aplus.png" alt="CompTIA A+ badge" loading="lazy"
+               class="w-full h-full object-contain p-3 group-hover:scale-105 transition duration-500" />
+        </div>
+        <div class="p-4 border-t border-slate-200 dark:border-white/10">
+          <h3 class="font-semibold">CompTIA A+</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">IT support fundamentals</p>
+        </div>
       </a>
+      
     </div>
   </section>
-
 
   <section id="contact" class="max-w-6xl mx-auto px-5 py-20 reveal">
     <h2 class="text-2xl md:text-3xl font-bold mb-8">Contact</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 space-y-3 text-sm">
-        <p><span class="font-mono text-accent">name:</span> Khen Belleza</p>
-        <p><span class="font-mono text-accent">role:</span> Developer · IT Specialist · Cyber Security · Pentester</p>
-        <p><span class="font-mono text-accent">email:</span> <a class="hover:text-accent" href="mailto:khen.belleza013@gmail.com">khen.belleza013@gmail.com</a></p>
-        <p><span class="font-mono text-accent">phone:</span> <a class="hover:text-accent" href="tel:+639543841310">+63 954 384 1310</a></p>
-        <p><span class="font-mono text-accent">location:</span> B.4 L.10 Crown Villa, Brgy. Bayanihan, Butuan City, Philippines 8600</p>
-        <div class="flex gap-3 pt-2">
-          <a href="https://www.facebook.com/khenbellezaa/" target="_blank" rel="noopener" class="hover:text-accent">Facebook</a>
-          <a href="https://www.linkedin.com/in/khenbelleza/" target="_blank" rel="noopener" class="hover:text-accent">LinkedIn</a>
-        </div>
+    <div class="max-w-2xl rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 space-y-3 text-sm">
+      <p><span class="font-mono text-accent">name:</span> Khen Belleza</p>
+      <p><span class="font-mono text-accent">role:</span> Developer · IT Specialist · Cyber Security · Pentester</p>
+      <p><span class="font-mono text-accent">email:</span> <a class="hover:text-accent" href="mailto:khen.belleza013@gmail.com">khen.belleza013@gmail.com</a></p>
+      <p><span class="font-mono text-accent">phone:</span> <a class="hover:text-accent" href="tel:+639543841310">+63 954 384 1310</a></p>
+      <p><span class="font-mono text-accent">location:</span> B.4 L.10 Crown Villa, Brgy. Bayanihan, Butuan City, Philippines 8600</p>
+      <div class="flex gap-4 pt-2">
+        <a href="https://www.facebook.com/khenbellezaa/" target="_blank" rel="noopener" class="hover:text-accent">Facebook</a>
+        <a href="https://www.linkedin.com/in/khenbelleza/" target="_blank" rel="noopener" class="hover:text-accent">LinkedIn</a>
       </div>
-
-      <!-- Contact form (use Formspree / Getform / Netlify Forms) -->
-      <form action="https://formspree.io/f/REPLACE_ME" method="POST"
-            class="rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 p-6 space-y-3">
-        <input type="text" name="name" required placeholder="Your name"
-               class="w-full rounded-lg bg-transparent border border-slate-300 dark:border-white/20 px-4 py-2.5 text-sm focus:border-accent focus:outline-none" />
-        <input type="email" name="email" required placeholder="Your email"
-               class="w-full rounded-lg bg-transparent border border-slate-300 dark:border-white/20 px-4 py-2.5 text-sm focus:border-accent focus:outline-none" />
-        <textarea name="message" rows="4" required placeholder="Message"
-                  class="w-full rounded-lg bg-transparent border border-slate-300 dark:border-white/20 px-4 py-2.5 text-sm focus:border-accent focus:outline-none"></textarea>
-        <button type="submit"
-                class="w-full rounded-lg bg-gradient-to-r from-accent to-accent2 text-slate-900 font-semibold py-2.5 hover:opacity-90 transition">
-          Send message
-        </button>
-      </form>
     </div>
   </section>
-
 
   <footer class="border-t border-slate-200 dark:border-white/10 mt-10">
     <div class="max-w-6xl mx-auto px-5 py-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-500 dark:text-slate-400">
       <p>© <span id="year"></span> Khen Belleza. All rights reserved.</p>
     </div>
   </footer>
-
 
   <dialog id="project-modal" class="rounded-2xl p-0 backdrop:bg-black/70 w-[min(92vw,900px)]">
     <div class="bg-white dark:bg-[#0b0f14] rounded-2xl overflow-hidden">
@@ -507,21 +531,18 @@
   </dialog>
 
   <script>
-
     (function () {
       const root = document.documentElement;
       const saved = localStorage.getItem('theme');
       if (saved === 'light') root.classList.remove('dark');
-      else root.classList.add('dark'); // default dark
+      else root.classList.add('dark');
       document.getElementById('theme-toggle').addEventListener('click', () => {
         root.classList.toggle('dark');
         localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
       });
     })();
 
-
     document.getElementById('year').textContent = new Date().getFullYear();
-
 
     (function () {
       const phrases = ['IT Specialist', 'Cyber Security', 'Pentester'];
@@ -542,14 +563,12 @@
       tick();
     })();
 
-
     (function () {
       const io = new IntersectionObserver((entries) => {
         entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
       }, { threshold: 0.12 });
       document.querySelectorAll('.reveal').forEach(el => io.observe(el));
     })();
-
 
     (function () {
       const grid = document.getElementById('project-grid');
@@ -565,7 +584,6 @@
         });
       }));
     })();
-
 
     (function () {
       const dlg = document.getElementById('project-modal');
